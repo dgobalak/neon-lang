@@ -35,5 +35,9 @@ if(CMAKE_BUILD_TYPE MATCHES "Software")
     add_executable(${SW_BINARY}
         main.cpp
     )
+
+    add_subdirectory("${CMAKE_SOURCE_DIR}/libs/spdlog")
+
     target_link_libraries(${SW_BINARY} PRIVATE ${SW_BINARY}_lib)
+    target_link_libraries(${SW_BINARY} PRIVATE spdlog::spdlog)
 endif()
