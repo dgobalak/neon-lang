@@ -20,7 +20,7 @@ if (CMAKE_BUILD_TYPE MATCHES "Test")
     add_library(GTest::GTest INTERFACE IMPORTED)
     target_link_libraries(GTest::GTest INTERFACE gtest_main)
     # ---------------------------------------------------------------
-    
+
     enable_testing()
 endif()
 
