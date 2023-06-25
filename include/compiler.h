@@ -3,6 +3,7 @@
 #include <string>
 
 #include "err_codes.h"
+#include "lexer.h"
 
 class Compiler {
  public:
@@ -13,4 +14,7 @@ class Compiler {
 
   ErrorCode compile(const std::string& input_file_path,
                     const std::string& output_file_path);
+
+ private:
+  Lexer lexer_;
 };

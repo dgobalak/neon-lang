@@ -3,7 +3,7 @@ set(SW_LIB_BINARY ${CMAKE_PROJECT_NAME}_sw_lib)
 
 set(TEST_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/test_formula.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/test_lexer.cpp
 )
 
 add_executable(${TEST_BINARY} ${TEST_SOURCES})

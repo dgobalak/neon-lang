@@ -1,13 +1,14 @@
 #include <iostream>
 
 #include "compiler.h"
+#include "err_codes.h"
+#include "spdlog/spdlog.h"
 
 int main(int argc, char* argv[]) {
   Compiler compiler{};
 
   if (argc != 3) {
-    std::cout << "Usage: " << argv[0] << " <input_file_path> <output_file_path>"
-              << std::endl;
+    spdlog::error("Usage: {} <input_file_path> <output_file_path>", argv[0]);
     return 1;
   }
 
@@ -17,7 +18,8 @@ int main(int argc, char* argv[]) {
   const ErrorCode error_code{
       compiler.compile(input_file_path, output_file_path)};
   if (error_code != ErrorCode::ERROR_CODE_SUCCESS) {
-    std::cout << "Error: " << static_cast<int>(error_code) << std::endl;
+    spdlog::error("Error compiling {}: {}", input_file_path,
+                  static_cast<int>(error_code));
     return 1;
   }
 
