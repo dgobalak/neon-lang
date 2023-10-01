@@ -27,7 +27,7 @@ To get a local copy up and running, follow these steps.
 
 1. Clone the repo
 2. git submodule update --init --recursive
-3. 
+3.
 
 ### Prerequisites
 
