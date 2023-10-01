@@ -18,18 +18,18 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-A compiled programming language (WIP).
+A custom programming language built by me (WIP).
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
 To get a local copy up and running, follow these steps.
 
-1. ```sudo apt-get install libboost-all-dev```
+1. 
 
 ### Prerequisites
 
-* Python
+* 
 
 ### Installation
 
