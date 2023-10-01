@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstdint>
 #include <string>
 
 #include "err_codes.hpp"
@@ -24,4 +25,11 @@ enum class token_type_E {
   TOKEN_COMMENT,
   TOKEN_END_STATEMENT,
   TOKEN_EOF,
+};
+
+typedef struct token_S {
+  token_type_E type;
+  std::string value;
+  uint32_t lineNum;
+  uint32_t colNum;
 };
