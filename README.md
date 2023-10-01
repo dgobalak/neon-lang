@@ -25,11 +25,11 @@ A custom programming language built by me (WIP).
 
 To get a local copy up and running, follow these steps.
 
-1. 
+1.
 
 ### Prerequisites
 
-* 
+*
 
 ### Installation
 
