@@ -14,8 +14,8 @@ class Compiler {
   Compiler& operator=(const Compiler& other) = delete;
   Compiler& operator=(Compiler&& other) = delete;
 
-  ErrorCode compile(const std::string& input_file_path,
-                    const std::string& output_file_path);
+  neon_err_code_E compile(const std::string& input_file_path,
+                          const std::string& output_file_path);
 
  private:
   Lexer lexer_;

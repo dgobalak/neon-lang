@@ -4,17 +4,17 @@
 
 #include "err_codes.hpp"
 
-ErrorCode Compiler::compile(const std::string& input_file_path,
-                            const std::string& output_file_path) {
-  ErrorCode ret;
+neon_err_code_E Compiler::compile(const std::string& input_file_path,
+                                  const std::string& output_file_path) {
+  neon_err_code_E ret;
 
   ret = lexer_.lex(input_file_path);
-  if (ret != ErrorCode::ERROR_CODE_SUCCESS) {
+  if (ret != neon_err_code_E::ERROR_CODE_SUCCESS) {
     return ret;
   }
 
   std::cout << "Compiling " << input_file_path << " to " << output_file_path
             << std::endl;
 
-  return ErrorCode::ERROR_CODE_SUCCESS;
+  return neon_err_code_E::ERROR_CODE_SUCCESS;
 }

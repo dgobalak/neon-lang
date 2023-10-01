@@ -4,14 +4,14 @@
 
 #include "err_codes.hpp"
 
-ErrorCode Lexer::lex(const std::string& fpath) {
+neon_err_code_E Lexer::lex(const std::string& fpath) {
   std::ifstream ifs(fpath);
 
   if (!ifs) {
-    return ErrorCode::ERROR_CODE_LEXER_FILE_NOT_FOUND;
+    return neon_err_code_E::ERROR_CODE_LEXER_FILE_NOT_FOUND;
   }
 
   // Read the file byte by byte
 
-  return ErrorCode::ERROR_CODE_SUCCESS;
+  return neon_err_code_E::ERROR_CODE_SUCCESS;
 }
