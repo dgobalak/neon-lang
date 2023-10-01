@@ -1,8 +1,8 @@
-#include "lexer.h"
+#include "lexer.hpp"
 
 #include <fstream>
 
-#include "err_codes.h"
+#include "err_codes.hpp"
 
 ErrorCode Lexer::lex(const std::string& fpath) {
   std::ifstream ifs(fpath);

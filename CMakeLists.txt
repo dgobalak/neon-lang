@@ -30,7 +30,7 @@ if (CMAKE_BUILD_TYPE MATCHES "Test")
     add_subdirectory(test)
 endif()
 
-if(CMAKE_BUILD_TYPE MATCHES "Software")
+if(CMAKE_BUILD_TYPE MATCHES "Neon")
     set(SW_BINARY ${CMAKE_PROJECT_NAME}_sw)
     add_executable(${SW_BINARY}
         main.cpp

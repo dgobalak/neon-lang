@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "lexer.h"
+#include "lexer.hpp"
 
 TEST(TestLexer, InvalidFilePath) {
   Lexer lexer;

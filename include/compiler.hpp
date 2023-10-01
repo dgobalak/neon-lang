@@ -2,8 +2,8 @@
 
 #include <string>
 
-#include "err_codes.h"
-#include "lexer.h"
+#include "err_codes.hpp"
+#include "lexer.hpp"
 
 class Compiler {
  public:

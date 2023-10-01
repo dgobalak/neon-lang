@@ -1,7 +1,8 @@
 #include <iostream>
 
-#include "compiler.h"
-#include "err_codes.h"
+#include "compiler.hpp"
+#include "err_codes.hpp"
+
 #include "spdlog/spdlog.h"
 
 int main(int argc, char* argv[]) {

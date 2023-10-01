@@ -1,8 +1,8 @@
-#include "compiler.h"
+#include "compiler.hpp"
 
 #include <iostream>
 
-#include "err_codes.h"
+#include "err_codes.hpp"
 
 ErrorCode Compiler::compile(const std::string& input_file_path,
                             const std::string& output_file_path) {

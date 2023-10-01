@@ -25,7 +25,9 @@ A custom programming language built by me (WIP).
 
 To get a local copy up and running, follow these steps.
 
-1.
+1. Clone the repo
+2. git submodule update --init --recursive
+3. 
 
 ### Prerequisites
 
