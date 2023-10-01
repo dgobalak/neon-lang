@@ -9,7 +9,9 @@ class Lexer {
   Lexer() = default;
   ~Lexer() = default;
   Lexer(const Lexer& other) = delete;
+  Lexer(Lexer&& other) = delete;
   Lexer& operator=(const Lexer& other) = delete;
+  Lexer& operator=(Lexer&& other) = delete;
 
   ErrorCode lex(const std::string& fpath);
 };
