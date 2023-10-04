@@ -1,17 +1,29 @@
 #include "lexer.hpp"
 
-#include <fstream>
+#include <iostream>
 
 #include "err_codes.hpp"
+#include "fscanner.hpp"
 
 neon_err_code_E Lexer::lex(const std::string& fpath) {
-  std::ifstream ifs(fpath);
+  neon_err_code_E ret;
 
-  if (!ifs) {
-    return neon_err_code_E::ERROR_CODE_LEXER_FILE_NOT_FOUND;
+  FileScanner fscan{};
+
+  ret = fscan.open(fpath);
+  if (ret != neon_err_code_E::ERROR_CODE_SUCCESS) {
+    return ret;
   }
 
-  // Read the file byte by byte
+  char c;
+  while (fscan.hasMoreChars()) {
+    ret = fscan.getNextChar(c);
+    if (ret != neon_err_code_E::ERROR_CODE_SUCCESS) {
+      return ret;
+    }
+
+    std::cout << c;
+  }
 
   return neon_err_code_E::ERROR_CODE_SUCCESS;
 }
